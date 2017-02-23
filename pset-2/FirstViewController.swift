@@ -10,6 +10,10 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBAction func start(_ sender: UIButton) {
+     
+    }
+    @IBOutlet weak var MadLibs: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +36,12 @@ class FirstViewController: UIViewController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! ViewController
+        
+        
+        
+        
+    }
+    
 }

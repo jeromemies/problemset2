@@ -11,7 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var data: Array<String>?
+    var data: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ extension SecondViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if (data != nil){
-            return data!.count
+            return 1
         } else {
             return 0
         }
@@ -56,7 +56,7 @@ extension SecondViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
         if let labels = data {
-            cell.textField.text = labels[indexPath.row]
+            cell.textField.text = labels
         } else {
             
         }

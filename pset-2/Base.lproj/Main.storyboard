@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="Gx0-5M-UZE">
             <objects>
-                <viewController id="g8o-bv-Egv" sceneMemberID="viewController">
+                <viewController id="g8o-bv-Egv" customClass="FirstViewController" customModule="pset_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W86-fS-nEf"/>
                         <viewControllerLayoutGuide type="bottom" id="sao-HI-PfH"/>
@@ -73,12 +73,41 @@
                     <view key="view" contentMode="scaleToFill" id="2RX-lc-9ys">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madlibs.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ZQ-c2-dKP">
+                                <rect key="frame" x="50" y="113" width="274" height="171"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQx-XB-630">
+                                <rect key="frame" x="192" y="464" width="109" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="L6G-WV-Lqd"/>
+                                    <constraint firstAttribute="width" constant="109" id="lcV-EJ-0IS"/>
+                                </constraints>
+                                <state key="normal" title="Let's start"/>
+                                <connections>
+                                    <action selector="start:" destination="g8o-bv-Egv" eventType="touchUpInside" id="1Ya-oj-N2f"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Xox-6b-8JQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sao-HI-PfH" firstAttribute="top" secondItem="jQx-XB-630" secondAttribute="bottom" constant="146" id="2Yg-Ox-Cbt"/>
+                            <constraint firstItem="1ZQ-c2-dKP" firstAttribute="centerX" secondItem="2RX-lc-9ys" secondAttribute="centerX" id="4Ui-Nu-Oa2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jQx-XB-630" secondAttribute="trailing" constant="58" id="88b-E7-BFX"/>
+                            <constraint firstItem="1ZQ-c2-dKP" firstAttribute="leading" secondItem="2RX-lc-9ys" secondAttribute="leadingMargin" constant="34" id="JVO-Y9-4sB"/>
+                            <constraint firstItem="sao-HI-PfH" firstAttribute="top" secondItem="1ZQ-c2-dKP" secondAttribute="bottom" constant="383" id="LKx-hG-R1Q"/>
+                            <constraint firstItem="1ZQ-c2-dKP" firstAttribute="top" secondItem="W86-fS-nEf" secondAttribute="bottom" constant="49" id="ysN-97-fSQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hlh-vh-5SB"/>
+                    <connections>
+                        <outlet property="MadLibs" destination="1ZQ-c2-dKP" id="c3X-jM-Ni8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3t-0q-elQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="803"/>
+            <point key="canvasLocation" x="1096.8" y="802.848575712144"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="2jg-g7-v6f">
@@ -92,20 +121,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-za-zAS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-za-zAS">
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="vM6-UB-Xoa" customClass="CustomCell" customModule="pset_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="172" id="vM6-UB-Xoa" customClass="CustomCell" customModule="pset_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vM6-UB-Xoa" id="Hd6-cf-JX0">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="171"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-Vn-mg3">
-                                                    <rect key="frame" x="8" y="11" width="327" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-Vn-mg3">
+                                                    <rect key="frame" x="8" y="4" width="300" height="163"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="163" id="5na-db-QRs"/>
+                                                        <constraint firstAttribute="width" constant="300" id="Sms-14-L6m"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -113,7 +146,6 @@
                                             <constraints>
                                                 <constraint firstItem="EHb-Vn-mg3" firstAttribute="centerY" secondItem="Hd6-cf-JX0" secondAttribute="centerY" id="U4m-O9-MtL"/>
                                                 <constraint firstItem="EHb-Vn-mg3" firstAttribute="leading" secondItem="Hd6-cf-JX0" secondAttribute="leadingMargin" id="UY9-U7-tni"/>
-                                                <constraint firstItem="EHb-Vn-mg3" firstAttribute="trailing" secondItem="Hd6-cf-JX0" secondAttribute="trailingMargin" id="rJE-e2-AtW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -154,7 +186,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QNZ-AZ-04P"/>
+                        <segue destination="g8o-bv-Egv" kind="relationship" relationship="rootViewController" id="PEP-Ye-Pmu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhv-r3-SwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,4 +194,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="madlibs.png" width="282" height="308"/>
+    </resources>
 </document>

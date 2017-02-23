@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var dataInputField: UITextField!
 
     let story = Story(stream: "I wannabe a <job> when I grow up. Just like my dad. Life is <adjective> like that!")
+
     
     
     
@@ -46,8 +48,7 @@ class ViewController: UIViewController {
         
         
         // Closure
-        secondViewController.data = dataInputField.text!.characters.split{ $0 == " " || $0 == "," }.map(String.init)
-        
+        secondViewController.data = story.toString()
         
         
     }

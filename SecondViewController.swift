@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
         if (data != nil){
            
             
-            Story.init(stream: "I wannabe a <job> when I grow up. Just like my dad. Life is <adjective> like that!")
+            
             
             
     }
@@ -70,4 +70,5 @@ extension SecondViewController: UITableViewDataSource{
 extension SecondViewController: UITableViewDelegate{
     
 }
+
 

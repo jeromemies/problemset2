@@ -21,6 +21,7 @@
 		02C72AF01E5F1CB700FBE18D /* madlibs.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C72AE91E5F1CB700FBE18D /* madlibs.png */; };
 		02C72AF11E5F1CB700FBE18D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C72AEA1E5F1CB700FBE18D /* Story.swift */; };
 		02C72AF31E5F22E000FBE18D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C72AF21E5F22E000FBE18D /* CustomCell.swift */; };
+		02C72AF51E5F5FE300FBE18D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C72AF41E5F5FE300FBE18D /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		02C72AE91E5F1CB700FBE18D /* madlibs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = madlibs.png; path = ../../../Downloads/madlibs_ios/madlibs.png; sourceTree = "<group>"; };
 		02C72AEA1E5F1CB700FBE18D /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = ../../../Downloads/madlibs_ios/Story.swift; sourceTree = "<group>"; };
 		02C72AF21E5F22E000FBE18D /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		02C72AF41E5F5FE300FBE18D /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				02C72AD01E5F16CC00FBE18D /* ViewController.swift */,
 				02C72AE21E5F190F00FBE18D /* SecondViewController.swift */,
 				02C72AF21E5F22E000FBE18D /* CustomCell.swift */,
+				02C72AF41E5F5FE300FBE18D /* FirstViewController.swift */,
 				02C72AD21E5F16CC00FBE18D /* Main.storyboard */,
 				02C72AD51E5F16CC00FBE18D /* Assets.xcassets */,
 				02C72AD71E5F16CC00FBE18D /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				02C72AE31E5F190F00FBE18D /* SecondViewController.swift in Sources */,
 				02C72AD11E5F16CC00FBE18D /* ViewController.swift in Sources */,
 				02C72AF31E5F22E000FBE18D /* CustomCell.swift in Sources */,
+				02C72AF51E5F5FE300FBE18D /* FirstViewController.swift in Sources */,
 				02C72ACF1E5F16CC00FBE18D /* AppDelegate.swift in Sources */,
 				02C72AF11E5F1CB700FBE18D /* Story.swift in Sources */,
 			);
@@ -335,6 +339,7 @@
 				02C72ADF1E5F16CC00FBE18D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

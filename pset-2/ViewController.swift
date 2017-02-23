@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var dataInputField: UITextField!
-    override func viewDidLoad() {
+
+    let story = Story(stream: "I wannabe a <job> when I grow up. Just like my dad. Life is <adjective> like that!")
+    
+    
+    
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+            let labels = story.getNextPlaceholder()
+            placeholderLabel.text = ("Fill in a " + labels)
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -24,10 +37,18 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        story.fillInPlaceholder(word: "job")
+        
+        print(story.getPlaceholderRemainingCount())
+        
         let secondViewController = segue.destination as! SecondViewController
+        
+        
         
         // Closure
         secondViewController.data = dataInputField.text!.characters.split{ $0 == " " || $0 == "," }.map(String.init)
+        
+        
         
     }
     

@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
             let labels = story.getNextPlaceholder()
-            placeholderLabel.text = ("Fill in a " + labels)
+            placeholderLabel.text = ("Fill in a(n) " + labels + ". " + String(story.getPlaceholderRemainingCount()) + " word(s) to go")
             print(story.getPlaceholderRemainingCount())
         
     }

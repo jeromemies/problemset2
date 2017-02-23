@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var dataInputField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +22,14 @@ class ViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let secondViewController = segue.destination as! SecondViewController
+        
+        // Closure
+        secondViewController.data = dataInputField.text!.characters.split{ $0 == " " || $0 == "," }.map(String.init)
+        
+    }
+    
 }
 
